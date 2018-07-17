@@ -147,26 +147,28 @@ nav h1 a {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  justify-content: flex-start;
 }
-#restaurants-list:after{
+/* #restaurants-list:after{
   display: block;
   content: '';
   visibility: hidden;
   clear:both;
   line-height: 0;
-}
+} */
 
 #restaurants-list li {
   /* float: left; */
-  flex: 1;
+  /* flex: 1; */
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
-  min-width: 270px;
+  width: 270px;
   padding: 0 30px 25px;
   text-align: left;
+  align-items: flex-start;
 }
 
 
@@ -312,6 +314,8 @@ nav h1 a {
   #restaurants-list li {
     margin-left: 0;
     margin-right: 0;
+    flex: 1;
+    min-width: 270px;
   }
   .inside #maincontent {
     flex-direction: column-reverse;
@@ -333,9 +337,3 @@ nav h1 a {
   }
 }
 
-@media only screen and (min-width: 768px){
-  #restaurants-list li:last-child{
-    width: 270px;
-    flex: none;
-  }
-}
