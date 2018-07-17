@@ -44,7 +44,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 .inside #maincontent{
   display: flex;
-  -webkit-display: flex;
+  display: -webkit-flex;
 }
 #footer {
   background-color: #444;
