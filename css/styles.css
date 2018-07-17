@@ -149,13 +149,6 @@ nav h1 a {
   align-items: center;
   justify-content: flex-start;
 }
-/* #restaurants-list:after{
-  display: block;
-  content: '';
-  visibility: hidden;
-  clear:both;
-  line-height: 0;
-} */
 
 #restaurants-list li {
   /* float: left; */

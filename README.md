@@ -28,5 +28,9 @@ This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://w
 
 Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
 
+#Steps
+1. 餐厅点评可以根据地点、餐厅的类别来进行筛选，查看餐厅列表
+2. 点击各个餐厅的详情可以看到餐厅的具体营业时间以及点评等信息
+
 
 
