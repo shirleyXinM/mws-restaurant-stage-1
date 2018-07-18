@@ -2,7 +2,7 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
       caches.open('v1').then(function(cache) {
         return cache.addAll([
-          '/',
+          '/sw.js',
           '/index.html',
           '/restaurant.html',
           '/data/restaurants.json',
@@ -29,6 +29,8 @@ self.addEventListener('install', function(event) {
     event.respondWith(caches.match(event.request).then(function(response) {
       // caches.match() always resolves
       // but in case of success response will have value
+      console.log('then',event.request.url);
+
       if (response !== undefined) {
         return response;
       } else {
@@ -36,8 +38,8 @@ self.addEventListener('install', function(event) {
           // response may be used only once
           // we need to save clone to put one copy in cache
           // and serve second one
+          console.log(event.request.url);
           let responseClone = response.clone();
-          
           caches.open('v1').then(function (cache) {
             cache.put(event.request, responseClone);
           });
